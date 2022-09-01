@@ -10,6 +10,6 @@ const app = express();
 
 app.use([cors(), json(), router]);
 
-const PORT:string|number = process.env.PORT || 4001;
+const PORT:number = Number(process.env.PORT) || 4001;
 
 app.listen(PORT, ():void=> console.log(`Server is listening on PORT: ${PORT}`));
